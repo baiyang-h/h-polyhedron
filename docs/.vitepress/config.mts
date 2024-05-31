@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { Nav, Sidebar } from './config/navigation'
+
 export default defineConfig({
   title: "My Awesome Project",
   description: "A VitePress Site",
@@ -14,5 +15,8 @@ export default defineConfig({
     ]
   },
   vite: {
+  },
+  markdown: {
+
   }
 })
