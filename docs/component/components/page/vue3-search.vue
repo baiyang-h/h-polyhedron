@@ -4,9 +4,13 @@
       <el-input v-model.trim="form.aaa" placeholder="请输入" />
     </el-form-item>
     <el-form-item label="bbb" prop="bbb">
-      <el-select v-model.trim="form.bbb" placeholder="请选择" clearable>
-        <el-option label="a" value="a" />
-        <el-option label="b" value="b" />
+      <el-select v-model.trim="form.bbb" placeholder="请选择" clearable style="width: 150px">
+        <el-option
+          v-for="item in [{label: 'a', value: 1}, {label: 'b', value: 2}]"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        />
       </el-select>
     </el-form-item>
     <el-form-item label="ccc" prop="ccc">
@@ -31,7 +35,7 @@
   </el-form>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { reactive, ref, toRaw } from 'vue'
 
 const formRef = ref(null)

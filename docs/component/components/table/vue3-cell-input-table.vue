@@ -22,7 +22,7 @@
   </el-table>
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import { nextTick } from 'vue'
 const tableData = [
   { date: '2016-05-03', name: 'Tom', address: 'No. 189, Grove St, Los Angeles', },

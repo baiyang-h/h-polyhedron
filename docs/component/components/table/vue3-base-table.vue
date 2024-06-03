@@ -8,7 +8,14 @@
     >
       <el-table-column prop="name" label="姓名" width="120"  />
       <el-table-column prop="address" label="地址" />
-      <el-table-column prop="date" label="日期" width="150"  />
+      <el-table-column
+        prop="date"
+        label="日期"
+        width="150"
+        :formatter="(row, column, cellValue) => {
+          return cellValue
+        }"
+      />
       <el-table-column fixed="right" label="操作" width="120">
         <template #default="scope">
           <el-button link type="primary" size="small" @click="handleEdit(scope)">编辑</el-button>
